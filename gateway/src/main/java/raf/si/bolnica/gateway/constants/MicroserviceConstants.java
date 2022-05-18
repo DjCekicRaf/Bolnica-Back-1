@@ -6,6 +6,6 @@ public class MicroserviceConstants {
     public static final String BASE_API = "/api";
 
     public interface UserMicroServiceConstants {
-        String FETCH_USER_BY_USERNAME = "/fetch-user/{username}";
+        String FETCH_USER_BY_USERNAME = "/fetch-user";
     }
 }

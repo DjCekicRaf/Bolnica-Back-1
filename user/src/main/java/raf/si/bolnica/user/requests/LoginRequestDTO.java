@@ -4,26 +4,15 @@ import java.io.Serializable;
 
 public class LoginRequestDTO implements Serializable {
 
-    private String userCredential;
+    private String email;
 
     private String password;
 
-    private Long subDepartmentId;
-
     public LoginRequestDTO() {}
 
-    public LoginRequestDTO(String userCredential, String password, Long subDepartmentId) {
-        this.userCredential = userCredential;
+    public LoginRequestDTO(String email, String password) {
+        this.email = email;
         this.password = password;
-        this.subDepartmentId = subDepartmentId;
-    }
-
-    public String getUserCredential() {
-        return userCredential;
-    }
-
-    public void setUserCredential(String userCredential) {
-        this.userCredential = userCredential;
     }
 
     public String getPassword() {
@@ -34,11 +23,11 @@ public class LoginRequestDTO implements Serializable {
         this.password = password;
     }
 
-    public Long getSubDepartmentId() {
-        return subDepartmentId;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public void setSubDepartmentId(Long subDepartmentId) {
-        this.subDepartmentId = subDepartmentId;
+    public String getEmail() {
+        return email;
     }
 }

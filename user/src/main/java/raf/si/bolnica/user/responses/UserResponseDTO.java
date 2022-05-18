@@ -1,5 +1,5 @@
 package raf.si.bolnica.user.responses;
-
+import raf.si.bolnica.user.models.Role;
 import java.util.Set;
 
 public class UserResponseDTO {
@@ -7,12 +7,13 @@ public class UserResponseDTO {
     public UserResponseDTO() {
     }
 
-    public UserResponseDTO(Long userId, String name, String surname, String password, String email) {
+    public UserResponseDTO(Long userId, String name, String surname, String password, String email, Set<Role> roles) {
         this.userId = userId;
         this.name = name;
         this.surname = surname;
         this.password = password;
         this.email = email;
+        this.roles = roles;
     }
 
     private Long userId;
@@ -25,7 +26,7 @@ public class UserResponseDTO {
 
     private String email;
 
-    private Set<String> roles;
+    private Set<Role> roles;
 
     public Long getUserId() {
         return userId;
@@ -67,11 +68,11 @@ public class UserResponseDTO {
         this.email = email;
     }
 
-    public Set<String> getRoles() {
+    public Set<Role> getRoles() {
         return roles;
     }
 
-    public void setRoles(Set<String> roles) {
+    public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
 }
